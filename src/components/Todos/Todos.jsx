@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import AddTodo from '../AddTodo/AddTodo';
 import Todo from '../Todo/Todo';
 import styles from './Todos.module.css';
 
 export default function Todos() {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState(readTodos);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const handleAdd = (todo) => {
     setTodos((todos) => [...todos, todo]);
@@ -35,7 +39,7 @@ export default function Todos() {
   );
 }
 
-const initialTodos = [
-  { id: '1', text: '장보기', isCompleted: false },
-  { id: '2', text: '청소하기', isCompleted: false },
-];
+const readTodos = () => {
+  const todos = localStorage.getItem('todos');
+  return todos ? JSON.parse(todos) : [];
+};
