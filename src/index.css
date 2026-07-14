@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+html.dark {
+  --color-bg: #2d2d2d;
+  --color-text: #f8f9fa;
+}
+
 body {
   margin: 0;
   padding: 0;
