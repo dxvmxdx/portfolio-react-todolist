@@ -1,0 +1,27 @@
+:root {
+  --color-bg-dark: #2d2d2d;
+  --color-bg: #f8f9fa;
+  --color-text: #333;
+  --color-accent: #f88379;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}

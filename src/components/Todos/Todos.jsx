@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import AddTodo from './AddTodo';
-import Todo from './Todo';
+import AddTodo from '../AddTodo/AddTodo';
+import Todo from '../Todo/Todo';
+import styles from './Todos.module.css';
 
 export default function Todos() {
   const [todos, setTodos] = useState(initialTodos);
@@ -18,8 +19,8 @@ export default function Todos() {
   };
 
   return (
-    <section>
-      <ul>
+    <section className={styles.container}>
+      <ul className={styles.lists}>
         {todos.map((todo) => (
           <Todo
             key={todo.id}

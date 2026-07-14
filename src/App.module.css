@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  min-width: 500px;
+  background: var(--color-bg);
+  border-radius: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

@@ -1,4 +1,5 @@
 import { FaRegTrashAlt } from 'react-icons/fa';
+import styles from './Todo.module.css';
 
 export default function Todo({
   todo,
@@ -10,16 +11,19 @@ export default function Todo({
     onUpdate({ ...todo, isCompleted: e.target.checked });
   };
   return (
-    <li>
+    <li className={styles.todo}>
       <input
+        className={styles.checkbox}
         type="checkbox"
-        name="text "
+        name="text"
         id="checkbox"
         checked={isCompleted}
         onChange={handleChange}
       />
-      <label htmlFor="checkbox">{text}</label>
-      <button onClick={() => onRemove(id)}>
+      <label className={styles.text} htmlFor="checkbox">
+        {text}
+      </label>
+      <button className={styles.button} onClick={() => onRemove(id)}>
         <FaRegTrashAlt />
       </button>
     </li>
