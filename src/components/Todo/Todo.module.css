@@ -14,8 +14,17 @@
 }
 
 .text {
+  overflow: hidden;
   flex-grow: 1;
   margin-left: 0.5rem;
+  width: 280px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.checkbox:checked + .text {
+  text-decoration: line-through;
+  color: #888;
 }
 
 .button {

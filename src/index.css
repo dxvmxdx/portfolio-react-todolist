@@ -16,6 +16,11 @@ html.dark {
   --color-text: #f8f9fa;
 }
 
+#root {
+  width: 100%;
+  max-width: 500px;
+}
+
 body {
   margin: 0;
   padding: 0;
